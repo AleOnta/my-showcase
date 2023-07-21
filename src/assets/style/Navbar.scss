@@ -1,0 +1,39 @@
+.navbar-custom {
+  .nav-link {
+    font-weight: 500;
+    -webkit-transition: color 300ms ease-in-out;
+    -moz-transition: color 300ms ease-in-out;
+    -ms-transition: color 300ms ease-in-out;
+    -o-transition: color 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
+    &:hover {
+      color: lightgray;
+    }
+  }
+}
+
+.logged-in-list-item {
+  .logged-in-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 9999px;
+    background-color: aqua;
+    .logged-in-char {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 700;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  }
+
+  .user-list {
+    margin-top: 22px;
+    left: -215px;
+    width: 250px;
+    background-color: aqua;
+  }
+}
