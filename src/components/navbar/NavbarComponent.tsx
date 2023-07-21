@@ -22,8 +22,11 @@ export const NavbarComponent = () => {
       <Row className="m-0">
         <Col xs={12} className="bg-dark py-3 px-0">
           <Row className="m-0 d-flex justify-content-between">
-            <Col xs={4} className="d-flex align-items-center pe-0">
-              <img src={Logo} alt="Custom Logo Ale Onta" width={90} />
+            <Col
+              xs={4}
+              className="d-flex align-items-center pe-0 nav-logo-column"
+            >
+              <img src={Logo} alt="Custom Logo Ale Onta" />
             </Col>
             <Col className="d-flex align-items-center justify-content-end ms-4">
               <ul className="d-flex align-items-center justify-content-around justify-content-md-end text-light list-unstyled m-0 nav-link-list">
