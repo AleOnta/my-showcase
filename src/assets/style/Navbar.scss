@@ -1,6 +1,14 @@
 .navbar-custom {
+  .nav-link-list {
+    width: 100%;
+  }
+
   .nav-link {
+    font-size: 13px;
     font-weight: 500;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     -webkit-transition: color 300ms ease-in-out;
     -moz-transition: color 300ms ease-in-out;
     -ms-transition: color 300ms ease-in-out;
@@ -14,15 +22,22 @@
 
 .logged-in-list-item {
   .logged-in-btn {
-    width: 35px;
-    height: 35px;
-    border-radius: 9999px;
-    background-color: aqua;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    background-color: white;
+    border-radius: 9999px !important;
+
+    @media screen and (min-width: 400px) {
+      width: 36px;
+      height: 36px;
+      font-size: 16px;
+    }
     .logged-in-char {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -51%);
       font-weight: 700;
       -webkit-user-select: none;
       -ms-user-select: none;
@@ -31,9 +46,22 @@
   }
 
   .user-list {
-    margin-top: 22px;
+    margin-top: 8px;
+    padding-top: 13px;
     left: -215px;
     width: 250px;
-    background-color: aqua;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+
+    li {
+      //border-top: 1px solid rgba(129, 129, 129, 0.308);
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    hr {
+      margin: 0 16px;
+    }
   }
 }
