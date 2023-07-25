@@ -1,0 +1,90 @@
+.body-container {
+  .home-title-row {
+    font-family: $font-titles;
+
+    @media screen and (min-width: 476px) {
+      margin-top: 70px !important;
+    }
+    @media screen and (min-width: 768px) {
+      margin-top: 60px !important;
+    }
+    @media screen and (min-width: 1400px) {
+      margin-top: 75px !important;
+    }
+    @media screen and (min-width: 1550px) {
+      margin-top: 90px !important;
+    }
+    .home-upper-title-column,
+    .home-lower-title-column {
+      color: white;
+      background-color: $jet;
+      text-transform: uppercase;
+      h1 {
+        font-size: 1.2rem;
+
+        @media screen and (min-width: 400px) {
+          font-size: 1.4rem;
+        }
+        @media screen and (min-width: 768px) {
+          font-size: 2.2rem;
+        }
+        @media screen and (min-width: 992px) {
+          font-size: 2.4rem;
+        }
+        @media screen and (min-width: 1550px) {
+          font-size: 2.7rem;
+        }
+        @media screen and (min-width: 1921px) {
+          font-size: 3.1rem;
+        }
+      }
+    }
+
+    .home-upper-img-column {
+      background-color: rgb(129, 118, 109);
+      border-bottom-left-radius: 9999px;
+      border-bottom-right-radius: 9999px;
+
+      img {
+        width: 50%;
+        @media screen and (min-width: 768px) {
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+  .home-body-row {
+    margin-top: 50px !important;
+
+    @media screen and (min-width: 476px) {
+      margin-top: 70px !important;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-top: 60px !important;
+    }
+    @media screen and (min-width: 1550px) {
+      margin-top: 90px !important;
+    }
+    .home-body-paragraph {
+      font-family: $font-body;
+      font-size: 0.85rem;
+
+      @media screen and (min-width: 400px) {
+        font-size: 0.95rem;
+      }
+
+      @media screen and (min-width: 476px) {
+        font-size: 1rem;
+      }
+      @media screen and (min-width: 768px) {
+        font-size: 1.1rem;
+      }
+      @media screen and (min-width: 1200px) {
+        font-size: 1.2rem;
+      }
+      @media screen and (min-width: 1550px) {
+        font-size: 1.35rem;
+      }
+    }
+  }
+}
