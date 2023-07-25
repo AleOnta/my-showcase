@@ -8,7 +8,7 @@ export const HomeSocialComponent = () => {
     <>
       <Row className="m-0">
         <motion.div
-          className="col col-12 text-center mt-5 text-uppercase mb-4 mb-lg-5 pt-xxl-4"
+          className="col col-12 text-center mt-5 text-uppercase mb-4 mb-lg-5 pt-xxl-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
@@ -42,14 +42,23 @@ export const HomeSocialComponent = () => {
           transition={{
             type: "spring",
             duration: 0.5,
-            delay: 2,
+            delay: 2.5,
           }}
         >
           <motion.span>
             <GithubIcon />
           </motion.span>
         </motion.div>
-        <motion.div className="col-4 d-flex justify-content-center align-items-center py-4">
+        <motion.div
+          className="col-4 d-flex justify-content-center align-items-center py-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            type: "spring",
+            duration: 0.5,
+            delay: 3,
+          }}
+        >
           <motion.span className="p3">
             <motion.svg
               whileHover={{ scale: 1.15 }}
