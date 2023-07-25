@@ -1,0 +1,58 @@
+.footer {
+  color: white;
+  margin-top: 100px !important;
+
+  @media screen and (min-width: 992px) {
+    margin-top: 150px !important;
+  }
+
+  .footer-icon-link {
+    margin-right: 20px;
+
+    .home-social-icon {
+      width: 30px;
+    }
+
+    .gmail-icon {
+      width: 37px;
+    }
+  }
+
+  .footer-links {
+    ul {
+      list-style-type: none;
+    }
+
+    li .footer-link {
+      color: white;
+      transition: color 0.2s;
+      &:hover {
+        text-decoration: none;
+        color: $khaki;
+      }
+    }
+  }
+
+  .footer-about-company {
+    i {
+      font-size: 25px;
+    }
+
+    a {
+      color: white;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $khaki;
+      }
+    }
+  }
+  .footer-location {
+    i {
+      font-size: 18px;
+    }
+  }
+  .footer-copyright p {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}

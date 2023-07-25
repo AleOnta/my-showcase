@@ -27,7 +27,7 @@ export const HomeSocialComponent = () => {
           animate={{ opacity: 1 }}
           transition={{
             type: "spring",
-            duration: 0.5,
+            duration: 0.3,
             delay: 2,
           }}
         >
@@ -41,8 +41,8 @@ export const HomeSocialComponent = () => {
           animate={{ opacity: 1 }}
           transition={{
             type: "spring",
-            duration: 0.5,
-            delay: 2.5,
+            duration: 0.3,
+            delay: 2.3,
           }}
         >
           <motion.span>
@@ -55,8 +55,8 @@ export const HomeSocialComponent = () => {
           animate={{ opacity: 1 }}
           transition={{
             type: "spring",
-            duration: 0.5,
-            delay: 3,
+            duration: 0.3,
+            delay: 2.6,
           }}
         >
           <motion.span className="p3">

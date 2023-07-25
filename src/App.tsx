@@ -4,6 +4,7 @@ import { Container, Col } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
 import { NavbarComponent } from "./components/navbar/NavbarComponent";
 import { HomepageComponent } from "./components/homepage/HomepageComponent";
+import { FooterComponent } from "./components/footer/FooterComponent";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <></>
         </Routes>
       </Container>
+      <FooterComponent />
     </Container>
   );
 }
