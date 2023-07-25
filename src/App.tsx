@@ -1,10 +1,11 @@
 import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
 import { NavbarComponent } from "./components/navbar/NavbarComponent";
 import { HomepageComponent } from "./components/homepage/HomepageComponent";
 import { FooterComponent } from "./components/footer/FooterComponent";
+import { ResumePageComponent } from "./components/my_resume_page/ResumePageComponent";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Routes>
           {/*Various Routes*/}
           <Route path="/homepage" element={<HomepageComponent />} />
-          <></>
+          <Route path="/my-resume" element={<ResumePageComponent />} />
           <></>
           <></>
         </Routes>
