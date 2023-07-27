@@ -36,7 +36,7 @@ export const NavbarComponent = () => {
                   </Link>
                 </li>
                 <li className="me-md-5 text-uppercase">
-                  <Link className="nav-link" to="/prospect">
+                  <Link className="nav-link" to="/my-resume">
                     My CV
                   </Link>
                 </li>

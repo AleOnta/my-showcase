@@ -6,6 +6,7 @@ import { NavbarComponent } from "./components/navbar/NavbarComponent";
 import { HomepageComponent } from "./components/homepage/HomepageComponent";
 import { FooterComponent } from "./components/footer/FooterComponent";
 import { ResumePageComponent } from "./components/my_resume_page/ResumePageComponent";
+import { RedirectComponent } from "./components/redirect/RedirectComponent";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Container className="body-container">
         <Routes>
           {/*Various Routes*/}
+          <Route path="/" element={<RedirectComponent />} />
           <Route path="/homepage" element={<HomepageComponent />} />
           <Route path="/my-resume" element={<ResumePageComponent />} />
           <></>
