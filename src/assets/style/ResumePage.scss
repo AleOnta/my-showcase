@@ -1,0 +1,57 @@
+.resume-container {
+  margin-top: 150px !important;
+
+  .resume-mobile-recap {
+    .resume-mobile-img {
+      min-width: 75px;
+      min-height: 75px;
+      border-radius: 9999px;
+      background-color: black;
+      margin-right: 10px;
+    }
+    h2.resume-title.mobile {
+      font-size: 1.2rem;
+      width: min-content;
+      white-space: nowrap;
+    }
+    h4.resume-profession.mobile {
+      color: gray;
+      font-size: 0.9rem;
+    }
+  }
+
+  .resume-section-title {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-family: $font-titles;
+  }
+
+  .resume-icon-container {
+    width: 28px;
+    height: 28px;
+    border-radius: 9999px;
+    background-color: $jet;
+    z-index: -1;
+  }
+
+  .resume-icon {
+    font-size: 1rem;
+    color: white;
+    z-index: 1;
+  }
+  .resume-info-p {
+    font-family: $font-body;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+  }
+
+  .resume-stack-info {
+    .resume-stack-icon {
+      font-size: 2rem;
+    }
+  }
+}
