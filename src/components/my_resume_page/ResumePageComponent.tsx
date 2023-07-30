@@ -4,8 +4,24 @@ import { EduExpComponent } from "./edu_exp_column/EduExpComponent";
 import { TechStackComponent } from "./personal_column/tech-stack/TechStackComponent";
 import { PersonalInfoComponent } from "./personal_column/personal_info/PersonalInfoComponent";
 import { ContactsComponent } from "./personal_column/contacts_info/ContactsComponent";
+import { useSessionStorage } from "../../hooks/useSessionStorage";
+import data from "../../assets/content/Placeholder.json";
+import { EduExpInterface } from "../../assets/interfaces/EduExpInterface";
 
 export const ResumePageComponent = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [aboutMe, setAboutMe] = useSessionStorage("about_me", data.about_me);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [educations, setEducations] = useSessionStorage(
+    "educations",
+    data.educations
+  );
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [experiences, setExperiences] = useSessionStorage(
+    "experiences",
+    data.experiences
+  );
+
   return (
     <Row className="mx-0 resume-container">
       <motion.div
@@ -22,10 +38,8 @@ export const ResumePageComponent = () => {
             <div className="d-flex align-items-center justify-content-around">
               <div className="resume-mobile-img"></div>
               <div>
-                <h2 className="resume-title mobile">Alessandro Ontani</h2>
-                <h4 className="resume-profession mobile m-0">
-                  Junior Full Stack Web Developer
-                </h4>
+                <h2 className="resume-title mobile">{aboutMe.fullname}</h2>
+                <h4 className="resume-profession mobile m-0">{aboutMe.job}</h4>
               </div>
             </div>
             <p></p>
@@ -50,21 +64,9 @@ export const ResumePageComponent = () => {
       >
         <Row className="m-0">
           <motion.div className="col col-12 d-none d-md-block resume-about-me p-0">
-            <h2 className="resume-about-me-title mb-0">Ontani Alessandro</h2>
-            <h4 className="resume-about-me-job">
-              Junior Full Stack Web Developer
-            </h4>
-            <p className="resume-about-me-text mb-0">
-              I am a 24 years old Junior Full-Stack Web Developer based in
-              Milan=[Italy], that had always been passionate about technology
-              and everything that revolves around it. In June 2023 I completed
-              Epicode's Junior Web Developer Bootcamp, which is an intensive
-              6-month training course composed of over 1000 hours of live-coding
-              lessons, daily exercises, and team projects. As a Jr. Full-Stack,
-              I enjoy both sides of web development and I intend to continue
-              forming me by deepening the technologies I already know and
-              studying new ones.
-            </p>
+            <h2 className="resume-about-me-title mb-0">{aboutMe.fullname}</h2>
+            <h4 className="resume-about-me-job">{aboutMe.job}</h4>
+            <p className="resume-about-me-text mb-0">{aboutMe.bio}</p>
           </motion.div>
           <motion.div className="col col-12 resume-edu-container p-0 mb-4">
             <div>
@@ -73,8 +75,9 @@ export const ResumePageComponent = () => {
                 <span className="resume-title-line"></span>
               </div>
               <Row className="m-0">
-                <EduExpComponent />
-                <EduExpComponent />
+                {educations.map((el: EduExpInterface, i: number) => (
+                  <EduExpComponent eduExp={el} key={i} />
+                ))}
               </Row>
             </div>
           </motion.div>
@@ -85,7 +88,9 @@ export const ResumePageComponent = () => {
                 <span className="resume-title-line"></span>
               </div>
               <Row className="m-0">
-                <EduExpComponent />
+                {experiences.map((el: EduExpInterface, i: number) => (
+                  <EduExpComponent eduExp={el} key={i} />
+                ))}
               </Row>
             </div>
           </motion.div>

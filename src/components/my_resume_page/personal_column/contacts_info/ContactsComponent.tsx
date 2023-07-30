@@ -5,8 +5,17 @@ import {
   BiLogoLinkedin,
   BiMobileAlt,
 } from "react-icons/bi";
+import { Link } from "react-router-dom";
+import { useSessionStorage } from "../../../../hooks/useSessionStorage";
+import data from "../../../../assets/content/Placeholder.json";
 
 export const ContactsComponent = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [infoAndContacts, setInfoAndContacts] = useSessionStorage(
+    "info_contacts",
+    data.info_contacts
+  );
+
   return (
     <motion.div className="col col-12 col-sm-6 col-md-12 resume-contact-info mb-4">
       <h3 className="resume-section-title">CONTACTS</h3>
@@ -14,25 +23,39 @@ export const ContactsComponent = () => {
         <span className="resume-icon-container d-flex justify-content-center align-items-center me-2 me-xl-3">
           <BiLogoGithub className="resume-icon" />
         </span>
-        <p className="resume-info-p m-0">AleOnta</p>
+        <Link to={infoAndContacts.github.url} className="resume-info-p m-0">
+          {infoAndContacts.github.username}
+        </Link>
       </div>
       <div className="d-flex aling-items-center mb-2 mb-sm-3">
         <span className="resume-icon-container d-flex justify-content-center align-items-center me-2 me-xl-3">
           <BiLogoLinkedin className="resume-icon" />
         </span>
-        <p className="resume-info-p m-0">Alessandro Ontani</p>
+        <Link to={infoAndContacts.linkedin.url} className="resume-info-p m-0">
+          {infoAndContacts.linkedin.username}
+        </Link>
       </div>
       <div className="d-flex aling-items-center mb-2 mb-sm-3">
         <span className="resume-icon-container d-flex justify-content-center align-items-center me-2 me-xl-3">
           <BiMobileAlt className="resume-icon" />
         </span>
-        <p className="resume-info-p m-0">IT (+39) 327 4794091</p>
+        <Link
+          to={"tel:" + infoAndContacts.mobile}
+          className="resume-info-p m-0"
+        >
+          IT (+39){infoAndContacts.mobile}
+        </Link>
       </div>
       <div className="d-flex aling-items-center mb-2 mb-sm-3">
         <span className="resume-icon-container d-flex justify-content-center align-items-center me-2 me-xl-3">
           <BiLogoGmail className="resume-icon" />
         </span>
-        <p className="resume-info-p email m-0">Alessandro-Ontani@outlook.com</p>
+        <Link
+          to={"mailto:" + infoAndContacts.email}
+          className="resume-info-p email m-0"
+        >
+          {infoAndContacts.email}
+        </Link>
       </div>
     </motion.div>
   );
