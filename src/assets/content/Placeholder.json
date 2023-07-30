@@ -1,0 +1,42 @@
+{
+  "about_me": {
+    "fullname": "Alessandro Ontani",
+    "job": "Junior Full Stack Web Developer",
+    "bio": "I am a 24 years old Junior Full-Stack Web Developer based in Milan=[Italy], that had always been passionate about technology and everything that revolves around it. In June 2023 I completed Epicode's Junior Web Developer Bootcamp, which is an intensive 6-month training course composed of over 1000 hours of live-coding lessons, daily exercises, and team projects. As a Jr. Full-Stack, I enjoy both sides of web development and I intend to continue forming me by deepening the technologies I already know and studying new ones."
+  },
+  "info_contacts": {
+    "fullname": "Alessandro Ontani",
+    "job": "Junior Full Stack Web Dev.",
+    "location": "Milan, Italy - IT",
+    "birthdate": "1999-01-11",
+    "github": {
+      "username": "AleOnta",
+      "url": "https://github.com/AleOnta"
+    },
+    "linkedin": {
+      "username": "Alessandro Ontani",
+      "url": "https://www.linkedin.com/in/alessandro-ontani-76848a191/"
+    },
+    "mobile": 3274794091,
+    "email": "Alessandro-Ontani@outlook.com"
+  },
+  "educations": [
+    {
+      "title": "EPICODE SCHOOL",
+      "name": "Junior Full-Stack Web Developer",
+      "description": "The epicode bootcamp to become Junior Full-Stack Developers lasts for 6 months. The first 3 months are entirely dedicated to the study of front-end development, starting from the bases such as HTML & CSS, and then moving on to the programming in Javascript and Typescript, deepening frameworks such as Bootstrap and React JS. The next two months, they are dedicated to back-end development, and to the creation of Rest API in Java Spring. All are made on relational databases in PostgreSQL and manipulated via ORM such as hibernate. The final month is entirely dedicated to the construction of a full-stack project."
+    },
+    {
+      "title": "EPICODE SCHOOL",
+      "name": "Junior Full-Stack Web Developer",
+      "description": "The epicode bootcamp to become Junior Full-Stack Developers lasts for 6 months. The first 3 months are entirely dedicated to the study of front-end development, starting from the bases such as HTML & CSS, and then moving on to the programming in Javascript and Typescript, deepening frameworks such as Bootstrap and React JS. The next two months, they are dedicated to back-end development, and to the creation of Rest API in Java Spring. All are made on relational databases in PostgreSQL and manipulated via ORM such as hibernate. The final month is entirely dedicated to the construction of a full-stack project."
+    }
+  ],
+  "experiences": [
+    {
+      "title": "EPICODE SCHOOL",
+      "name": "Junior Full-Stack Web Developer",
+      "description": "The epicode bootcamp to become Junior Full-Stack Developers lasts for 6 months. The first 3 months are entirely dedicated to the study of front-end development, starting from the bases such as HTML & CSS, and then moving on to the programming in Javascript and Typescript, deepening frameworks such as Bootstrap and React JS. The next two months, they are dedicated to back-end development, and to the creation of Rest API in Java Spring. All are made on relational databases in PostgreSQL and manipulated via ORM such as hibernate. The final month is entirely dedicated to the construction of a full-stack project."
+    }
+  ]
+}

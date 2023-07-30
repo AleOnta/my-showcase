@@ -7,8 +7,17 @@ import { HomepageComponent } from "./components/homepage/HomepageComponent";
 import { FooterComponent } from "./components/footer/FooterComponent";
 import { ResumePageComponent } from "./components/my_resume_page/ResumePageComponent";
 import { RedirectComponent } from "./components/redirect/RedirectComponent";
+import data from "./assets/content/Placeholder.json";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    sessionStorage.setItem("about_me", JSON.stringify(data.about_me));
+    sessionStorage.setItem("info_contacts", JSON.stringify(data.info_contacts));
+    sessionStorage.setItem("educations", JSON.stringify(data.educations));
+    sessionStorage.setItem("experiences", JSON.stringify(data.experiences));
+  }, []);
+
   return (
     <Container fluid className="p-0 h-100">
       {/*Navbar Component*/}
