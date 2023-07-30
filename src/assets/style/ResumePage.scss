@@ -1,44 +1,187 @@
 .resume-container {
-  margin-top: 150px !important;
+  margin-top: 130px !important;
 
   .resume-mobile-recap {
     .resume-mobile-img {
       min-width: 75px;
       min-height: 75px;
       border-radius: 9999px;
-      background-color: black;
+      background-image: url("../images/avatar.jpg");
+      background-size: cover;
+      background-position: right;
       margin-right: 10px;
     }
+
     h2.resume-title.mobile {
       font-size: 1.2rem;
       width: min-content;
       white-space: nowrap;
     }
+
     h4.resume-profession.mobile {
       color: gray;
       font-size: 0.9rem;
     }
+
+    @media screen and (min-width: 400px) {
+      .resume-mobile-img {
+        min-width: 100px;
+        min-height: 100px;
+      }
+
+      h2.resume-title.mobile {
+        font-size: 1.4rem;
+      }
+
+      h4.resume-profession.mobile {
+        font-size: 1rem;
+      }
+    }
+
+    @media screen and (min-width: 576px) {
+      .resume-mobile-img {
+        min-width: 150px;
+        min-height: 150px;
+      }
+
+      h2.resume-title.mobile {
+        font-size: 1.85rem;
+      }
+
+      h4.resume-profession.mobile {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .resume-img-rounded {
+    width: 210px;
+    height: 210px;
+    border-radius: 9999px;
+    background-image: url("../images/avatar.jpg");
+    background-size: cover;
+    background-position: right;
+  }
+
+  .resume-about-me {
+    height: 258px;
+    .resume-about-me-title {
+      font-size: 2rem;
+    }
+    .resume-about-me-job {
+      font-size: 1.3rem;
+      color: gray;
+    }
+    .resume-about-me-text {
+      font-family: $font-body;
+      font-size: 0.75rem;
+      letter-spacing: -0.4px;
+      word-spacing: -4px;
+    }
+
+    .resume-about-me-text::-webkit-scrollbar {
+      width: 5px;
+      max-height: 5px;
+    }
+
+    .resume-about-me-text::-webkit-scrollbar-thumb {
+      background-color: rgba(51, 51, 51, 0.582);
+      border-radius: 5px;
+    }
+
+    .resume-about-me-text::-webkit-scrollbar-track {
+      background-color: inherit;
+    }
+
+    @media screen and (min-width: 1200px) {
+      .resume-about-me-title {
+        font-size: 2.3rem;
+      }
+      .resume-about-me-job {
+        font-size: 1.5rem;
+      }
+      .resume-about-me-text {
+        font-size: 0.85rem;
+        letter-spacing: 0;
+        word-spacing: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+        overflow-y: scroll;
+      }
+    }
   }
 
   .resume-section-title {
-    margin-bottom: 15px;
     font-size: 1.3rem;
+    font-weight: 600;
     font-family: $font-titles;
+
+    @media screen and (min-width: 576px) {
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: 992px) {
+      font-size: 1.45rem;
+    }
+    @media screen and (min-width: 1400px) {
+      font-size: 1.6rem;
+      margin-bottom: 30px;
+    }
+  }
+
+  .icon-stack-col {
+    .stack-tooltip {
+      width: fit-content;
+      white-space: nowrap;
+      position: absolute;
+      top: -25px;
+      right: 0;
+      left: 0;
+      margin: auto;
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: $font-body;
+      color: white;
+      background-color: black;
+      border-radius: 8px;
+    }
   }
 
   .resume-icon-container {
-    width: 28px;
+    min-width: 28px;
     height: 28px;
     border-radius: 9999px;
     background-color: $jet;
     z-index: -1;
+
+    .resume-icon {
+      font-size: 1rem;
+      color: white;
+      z-index: 1;
+      &:hover {
+        cursor: pointer !important;
+      }
+    }
+
+    @media screen and (min-width: 992px) {
+      min-width: 32px;
+      height: 32px;
+
+      .resume-icon {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media screen and (min-width: 1400px) {
+      min-width: 36px;
+      height: 36px;
+
+      .resume-icon {
+        font-size: 1.5rem;
+      }
+    }
   }
 
-  .resume-icon {
-    font-size: 1rem;
-    color: white;
-    z-index: 1;
-  }
   .resume-info-p {
     font-family: $font-body;
     font-size: 0.8rem;
@@ -47,11 +190,147 @@
     text-overflow: ellipsis;
     display: flex;
     align-items: center;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  .resume-info-p.email {
+    font-size: 0.7rem;
+
+    @media screen and (min-width: 350px) {
+      font-size: 0.8rem;
+    }
+    @media screen and (min-width: 576px) {
+      font-size: 0.7rem;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 0.6rem;
+    }
+    @media screen and (min-width: 992px) {
+      font-size: 0.8rem;
+    }
   }
 
   .resume-stack-info {
     .resume-stack-icon {
       font-size: 2rem;
+
+      @media screen and (min-width: 400px) {
+        font-size: 2.5rem;
+      }
+      @media screen and (min-width: 768px) {
+        font-size: 1.9rem;
+      }
+      @media screen and (min-width: 1200px) {
+        font-size: 2.3rem;
+      }
+      @media screen and (min-width: 1400px) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .resume-title-line {
+    height: 1px;
+    width: 100%;
+    background-color: black;
+  }
+
+  .resume-edu-container,
+  .resume-exp-container {
+    .edu-exp-main-title {
+      font-size: 1.1rem;
+    }
+
+    .edu-exp-second-title {
+      font-size: 1rem;
+      color: gray;
+    }
+
+    .edu-exp-text {
+      font-size: 0.75rem;
+      font-family: $font-body;
+      letter-spacing: -0.2px;
+      word-spacing: -3px;
+      margin-right: 4px;
+
+      @media screen and (max-width: 500px) {
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow-y: scroll;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      .edu-exp-text {
+        display: -webkit-box;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+        overflow-y: scroll;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      .edu-exp-main-title {
+        font-size: 1.25rem;
+      }
+
+      .edu-exp-second-title {
+        font-size: 1.1rem;
+        color: gray;
+      }
+
+      .edu-exp-text {
+        font-size: 0.85rem;
+        font-family: $font-body;
+        letter-spacing: 0;
+        word-spacing: -3px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 10;
+        -webkit-box-orient: vertical;
+        overflow-y: scroll;
+      }
+    }
+
+    @media screen and (min-width: 1400px) {
+      .edu-exp-main-title {
+        font-size: 1.35rem;
+      }
+
+      .edu-exp-second-title {
+        font-size: 1.15rem;
+        color: gray;
+      }
+
+      .edu-exp-text {
+        font-size: 0.9rem;
+        font-family: $font-body;
+        letter-spacing: 0;
+        word-spacing: -3px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 10;
+        -webkit-box-orient: vertical;
+        overflow-y: scroll;
+      }
+    }
+
+    .edu-exp-text::-webkit-scrollbar {
+      width: 5px;
+      max-height: 5px;
+    }
+
+    .edu-exp-text::-webkit-scrollbar-thumb {
+      background-color: rgba(51, 51, 51, 0.582);
+      border-radius: 5px;
+    }
+
+    .edu-exp-text::-webkit-scrollbar-track {
+      background-color: inherit;
     }
   }
 }
