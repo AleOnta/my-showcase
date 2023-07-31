@@ -118,6 +118,7 @@ export const InfoAndContactsItemComponent = () => {
           <Button
             className="confirmation-btn rounded-pill mt-3"
             disabled={staticInfoAndContacts === infoAndContacts}
+            onClick={() => setInfoAndContacts(staticInfoAndContacts)}
           >
             Confirm changes
           </Button>

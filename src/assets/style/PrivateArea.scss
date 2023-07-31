@@ -126,6 +126,77 @@
       }
     }
 
+    // EDU EXP ITEM COMPONENT SECTION:
+    .card {
+      background-color: inherit;
+      border-color: rgba(128, 128, 128, 0.445);
+
+      .card-header {
+        background-color: rgba(138, 138, 138, 0.514);
+        h4.private-eduExp-title {
+          font-size: 1rem;
+          text-transform: uppercase;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-family: $font-titles;
+        }
+
+        .private-eduExp-btn {
+          background-color: rgba(211, 211, 211, 0.397);
+          border-color: #ffffff00;
+
+          .icon {
+            color: $jet;
+            transition: color 0.2s ease;
+          }
+
+          &:hover {
+            border: 1px solid gray;
+            background-color: rgba(138, 138, 138, 0.514);
+
+            .icon {
+              color: #fff;
+            }
+          }
+        }
+
+        .dropdown-toggle::after {
+          display: none;
+        }
+
+        h5.private-eduExp-subtitle {
+          font-size: 0.9rem;
+          color: rgb(87, 87, 87);
+          font-family: $font-titles;
+        }
+
+        .private-eduExp-dates {
+          font-size: 0.55rem;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+      }
+
+      .card-body {
+        background-color: rgba(211, 211, 211, 0.397);
+
+        p.private-description-head {
+          font-size: 0.65rem;
+          font-family: $font-titles;
+          text-transform: uppercase;
+          color: gray;
+        }
+
+        p.private-eduExp-description {
+          font-size: 0.7rem;
+          font-family: $font-body;
+          letter-spacing: -0.2px;
+          word-spacing: -2px;
+        }
+      }
+    }
+
     .accordion-item.about-me {
       .img-preview {
         width: 150px;
