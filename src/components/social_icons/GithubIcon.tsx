@@ -10,7 +10,7 @@ export const GithubIcon = () => {
       y="0px"
       width="100%"
       viewBox="0 0 800 800"
-      enable-background="new 0 0 800 800"
+      enableBackground="new 0 0 800 800"
       className="home-social-icon"
       whileHover={{ scale: 1.15 }}
     >
