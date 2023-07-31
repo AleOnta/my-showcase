@@ -9,6 +9,7 @@ import { ResumePageComponent } from "./components/my_resume_page/ResumePageCompo
 import { RedirectComponent } from "./components/redirect/RedirectComponent";
 import data from "./assets/content/Placeholder.json";
 import { useEffect } from "react";
+import { PrivateAreaComponent } from "./components/private_area/PrivateAreaComponent";
 
 function App() {
   useEffect(() => {
@@ -28,7 +29,7 @@ function App() {
           <Route path="/" element={<RedirectComponent />} />
           <Route path="/homepage" element={<HomepageComponent />} />
           <Route path="/my-resume" element={<ResumePageComponent />} />
-          <></>
+          <Route path="/private-area" element={<PrivateAreaComponent />} />
           <></>
         </Routes>
       </Container>
