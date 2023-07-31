@@ -1,0 +1,50 @@
+.modal-content {
+  background-color: rgb(184, 189, 199) !important;
+
+  .modal-header {
+    font-family: $font-titles;
+  }
+
+  .modal-body {
+    .form-label {
+      font-size: 0.85rem;
+      font-family: $font-titles;
+      margin-bottom: 4px;
+      margin-top: 12px;
+      color: $jet;
+    }
+
+    .form-control {
+      width: 100%;
+      font-family: $font-body;
+      letter-spacing: -0.4px;
+      word-spacing: -2px;
+      font-size: 0.7rem;
+      background-color: rgba(211, 211, 211, 0.397);
+      border-color: rgba(128, 128, 128, 0.445);
+
+      &:focus {
+        -webkit-box-shadow: inset 0px -1px 8px -3px rgba(133, 133, 140, 1);
+        -moz-box-shadow: inset 0px -1px 8px -3px rgba(133, 133, 140, 1);
+        box-shadow: inset 0px -1px 8px -3px rgba(133, 133, 140, 1);
+      }
+    }
+  }
+
+  .modal-footer {
+    .confirmation-btn {
+      background-color: rgba(211, 211, 211, 0.397);
+      border-color: gray;
+      font-family: $font-body;
+      font-size: 0.8rem;
+      color: rgb(0, 0, 0);
+      width: 100%;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.555);
+        color: #fff;
+      }
+    }
+  }
+}
