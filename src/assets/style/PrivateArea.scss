@@ -127,19 +127,32 @@
     }
 
     // EDU EXP ITEM COMPONENT SECTION:
+
+    .card.expanded {
+      max-height: 350px;
+    }
+
     .card {
       background-color: inherit;
       border-color: rgba(128, 128, 128, 0.445);
+      max-height: 300px;
+      overflow: hidden;
+      -webkit-transition: max-height 1s;
+      -moz-transition: max-height 1s;
+      -ms-transition: max-height 1s;
+      -o-transition: max-height 1s;
+      transition: max-height 1s;
 
       .card-header {
         background-color: rgba(138, 138, 138, 0.514);
         h4.private-eduExp-title {
           font-size: 1rem;
           text-transform: uppercase;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
           font-family: $font-titles;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
 
         .private-eduExp-btn {
@@ -169,6 +182,10 @@
           font-size: 0.9rem;
           color: rgb(87, 87, 87);
           font-family: $font-titles;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
 
         .private-eduExp-dates {
@@ -180,6 +197,20 @@
 
       .card-body {
         background-color: rgba(211, 211, 211, 0.397);
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          width: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: rgba(51, 51, 51, 0.582);
+          border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: inherit;
+        }
 
         p.private-description-head {
           font-size: 0.65rem;
@@ -195,6 +226,79 @@
           word-spacing: -2px;
         }
       }
+
+      .private-eduExp-expand.off {
+        position: sticky;
+        bottom: 0;
+        background-color: rgba(185, 185, 185, 1);
+        border-bottom-left-radius: 0.375rem;
+        border-bottom-right-radius: 0.375rem;
+        transition-property: background-color, box-shadow;
+        -webkit-transition: 0.3s ease-out;
+        -moz-transition: 0.3s ease-out;
+        -o-transition: 0.3s ease-out;
+        transition: 0.3s ease-out;
+        cursor: pointer;
+        -webkit-box-shadow: 0px -18px 20px 20px rgba(185, 185, 185, 1);
+        -moz-box-shadow: 0px -18px 20px 20px rgba(185, 185, 185, 1);
+        box-shadow: 0px -18px 20px 20px rgba(185, 185, 185, 1);
+
+        .expand-icon {
+          color: $jet;
+          transition-property: transform, color;
+          -webkit-transition: 0.15s ease-out;
+          -moz-transition: 0.15s ease-out;
+          -o-transition: 0.15s ease-out;
+          transition: 0.15s ease-out;
+        }
+
+        &:hover {
+          background-color: rgba(138, 138, 138, 1);
+          -webkit-box-shadow: 0px -18px 20px 20px rgba(138, 138, 138, 1);
+          -moz-box-shadow: 0px -18px 20px 20px rgba(138, 138, 138, 1);
+          box-shadow: 0px -18px 20px 20px rgba(138, 138, 138, 1);
+          .expand-icon {
+            transform: scale(1.08);
+            color: #fff;
+          }
+        }
+      }
+
+      .private-eduExp-expand.on {
+        bottom: 0;
+        background-color: rgba(185, 185, 185, 1);
+        border-bottom-left-radius: 0.375rem;
+        border-bottom-right-radius: 0.375rem;
+        transition-property: background-color, box-shadow;
+        -webkit-transition: 0.3s ease-out;
+        -moz-transition: 0.3s ease-out;
+        -o-transition: 0.3s ease-out;
+        transition: 0.3s ease-out;
+        cursor: pointer;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+
+        .expand-icon {
+          color: $jet;
+          transition-property: transform, color;
+          -webkit-transition: 0.15s ease-out;
+          -moz-transition: 0.15s ease-out;
+          -o-transition: 0.15s ease-out;
+          transition: 0.15s ease-out;
+        }
+
+        &:hover {
+          background-color: rgba(138, 138, 138, 1);
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          .expand-icon {
+            transform: scale(1.08);
+            color: #fff;
+          }
+        }
+      }
     }
 
     .accordion-item.about-me {
@@ -205,6 +309,94 @@
         background-image: url("../images/avatar.jpg");
         background-size: cover;
         background-position: right;
+      }
+    }
+  }
+}
+
+.edit-edu-exp-modal {
+  .modal-header {
+    .modal-title {
+      font-family: $font-titles;
+    }
+  }
+
+  .modal-body {
+    .edu-exp-datepicker-container {
+      width: 50%;
+
+      label {
+        display: block;
+      }
+
+      input {
+        width: 100px;
+        font-size: 0.8rem;
+        font-family: $font-body;
+        background-color: rgba(255, 255, 255, 0.712);
+        border-color: rgba(128, 128, 128, 0.445);
+      }
+
+      &:focus-visible {
+        -webkit-box-shadow: inset 0px -1px 8px -3px rgba(133, 133, 140, 1);
+        -moz-box-shadow: inset 0px -1px 8px -3px rgba(133, 133, 140, 1);
+        box-shadow: inset 0px -1px 8px -3px rgba(133, 133, 140, 1);
+        outline: #ffffff00 !important;
+
+        .react-datepicker__input-container {
+          outline: #ffffff00 !important;
+        }
+
+        input {
+          outline-offset: 0px;
+        }
+      }
+    }
+
+    .form-control#edu-exp-description {
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(51, 51, 51, 0.582);
+        border-radius: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: inherit;
+      }
+    }
+  }
+
+  .modal-footer {
+    .confirmation-btn.loading {
+      background-color: rgba(155, 155, 155, 0.74);
+    }
+    .btn {
+      .loader {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 32px 0 #fff, -32px 0 #fff;
+        position: relative;
+        animation: flash 0.5s ease-out infinite alternate;
+      }
+
+      @keyframes flash {
+        0% {
+          background-color: #fff2;
+          box-shadow: 32px 0 #fff2, -32px 0 #fff;
+        }
+        50% {
+          background-color: #fff;
+          box-shadow: 32px 0 #fff2, -32px 0 #fff2;
+        }
+        100% {
+          background-color: #fff2;
+          box-shadow: 32px 0 #fff, -32px 0 #fff2;
+        }
       }
     }
   }

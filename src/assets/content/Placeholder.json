@@ -25,15 +25,15 @@
       "title": "000 EPICODE SCHOOL",
       "name": "Junior Full-Stack Web Developer",
       "description": "The epicode bootcamp to become Junior Full-Stack Developers lasts for 6 months. The first 3 months are entirely dedicated to the study of front-end development, starting from the bases such as HTML & CSS, and then moving on to the programming in Javascript and Typescript, deepening frameworks such as Bootstrap and React JS. The next two months, they are dedicated to back-end development, and to the creation of Rest API in Java Spring. All are made on relational databases in PostgreSQL and manipulated via ORM such as hibernate. The final month is entirely dedicated to the construction of a full-stack project.",
-      "from": "28/11/2022",
-      "to": "17/06/2023"
+      "from": "2022-11-28",
+      "to": "2023-06-17"
     },
     {
-      "title": "111 EPICODE SCHOOL",
-      "name": "Junior Full-Stack Web Developer",
-      "description": "The epicode bootcamp to become Junior Full-Stack Developers lasts for 6 months. The first 3 months are entirely dedicated to the study of front-end development, starting from the bases such as HTML & CSS, and then moving on to the programming in Javascript and Typescript, deepening frameworks such as Bootstrap and React JS. The next two months, they are dedicated to back-end development, and to the creation of Rest API in Java Spring. All are made on relational databases in PostgreSQL and manipulated via ORM such as hibernate. The final month is entirely dedicated to the construction of a full-stack project.",
-      "from": "28/11/2022",
-      "to": "17/06/2023"
+      "title": "ITS HOTEL MANAGER - INNOVATURISMO",
+      "name": "Tourist Accomodation Facilities Manager",
+      "description": "Training course lasting two years (consisting of 600 hours of theoretical lessons and 400 hours of internship, each), to allow to the student to be able to face and manage all possible situations present inside a chain/accommodation. The most in-depth subjects during the course are: Front Office, Revenue Management, Business Economics, Web Marketing / Marketing territorial, work safety, food & beverage, housekeeping, Event organization and management, English and Russian. Almost all the professors within the course are operational or have had multiple previous experiences with the subject who teach.",
+      "from": "2020-11-09",
+      "to": "2022-06-08"
     }
   ],
   "experiences": [
@@ -41,8 +41,8 @@
       "title": "EPICODE SCHOOL",
       "name": "Junior Full-Stack Web Developer",
       "description": "The epicode bootcamp to become Junior Full-Stack Developers lasts for 6 months. The first 3 months are entirely dedicated to the study of front-end development, starting from the bases such as HTML & CSS, and then moving on to the programming in Javascript and Typescript, deepening frameworks such as Bootstrap and React JS. The next two months, they are dedicated to back-end development, and to the creation of Rest API in Java Spring. All are made on relational databases in PostgreSQL and manipulated via ORM such as hibernate. The final month is entirely dedicated to the construction of a full-stack project.",
-      "from": "28/11/2022",
-      "to": "17/06/2023"
+      "from": "2022-11-28",
+      "to": "2023-06-17"
     }
   ]
 }

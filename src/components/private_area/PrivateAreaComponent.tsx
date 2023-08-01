@@ -1,9 +1,7 @@
-import { Accordion, Col, Row } from "react-bootstrap";
+import { Accordion, Button, Col, Row } from "react-bootstrap";
 import { useSessionStorage } from "../../hooks/useSessionStorage";
 import data from "../../assets/content/Placeholder.json";
-import { useState } from "react";
-import { AboutMeInterface } from "../../assets/interfaces/AboutMeInterface";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import { AboutMeItemComponent } from "./about_me/AboutMeItemComponent";
 import { InfoAndContactsItemComponent } from "./info_contacts/InfoAndContactsItemComponent";
 import { EduExpItemComponent } from "./educations_experiences/EduExpItemComponent";
@@ -24,9 +22,23 @@ export const PrivateAreaComponent = () => {
   const [staticEducations, setStaticEducations] =
     useState<EduExpInterface[]>(educations);
 
-  const deleteEduExp2 = (i: number, type: string) => {
+  useEffect(() => {
+    setEducations(staticEducations);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [staticEducations]);
+
+  useEffect(() => {
+    setExperiences(staticExperiences);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [staticExperiences]);
+
+  const edit_deleteEduExp = (
+    i: number,
+    type: string,
+    eduExp?: EduExpInterface
+  ) => {
     switch (type) {
-      case "exp": {
+      case "del_exp": {
         if (i <= staticExperiences.length - 1) {
           const updatedExp = [
             ...staticExperiences.slice(0, i),
@@ -38,7 +50,7 @@ export const PrivateAreaComponent = () => {
         }
         break;
       }
-      case "edu": {
+      case "del_edu": {
         if (i <= staticEducations.length - 1) {
           const updatedEdu = [
             ...staticEducations.slice(0, i),
@@ -47,6 +59,32 @@ export const PrivateAreaComponent = () => {
           setStaticEducations(updatedEdu);
         } else {
           window.alert("Error while deleting education - try again later");
+        }
+        break;
+      }
+      case "edit_edu": {
+        if (i <= staticEducations.length - 1 && eduExp) {
+          const updatedEdu = [
+            ...staticEducations.slice(0, i),
+            ...staticEducations.slice(i + 1),
+          ];
+          updatedEdu.push(eduExp);
+          setStaticEducations(updatedEdu);
+        } else {
+          window.alert("Error while updating education - try again later");
+        }
+        break;
+      }
+      case "edit_exp": {
+        if (i <= staticExperiences.length - 1 && eduExp) {
+          const updatedEdu = [
+            ...staticExperiences.slice(0, i),
+            ...staticExperiences.slice(i + 1),
+          ];
+          updatedEdu.push(eduExp);
+          setStaticExperiences(updatedEdu);
+        } else {
+          window.alert("Error while updating experience - try again later");
         }
         break;
       }
@@ -98,10 +136,13 @@ export const PrivateAreaComponent = () => {
                   eduOrExp={el}
                   allEduExp={staticEducations}
                   setEduExp={setStaticEducations}
-                  remove={deleteEduExp2}
+                  edit_delete={edit_deleteEduExp}
                   key={"edu-" + i}
                 />
               ))}
+              <Button className="w-100 confirmation-btn rounded-pill">
+                Add a new Education
+              </Button>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="4" className="accordion-item experiences">
@@ -114,7 +155,7 @@ export const PrivateAreaComponent = () => {
                   eduOrExp={el}
                   allEduExp={staticExperiences}
                   setEduExp={setStaticExperiences}
-                  remove={deleteEduExp2}
+                  edit_delete={edit_deleteEduExp}
                   key={"exp-" + i}
                 />
               ))}
