@@ -41,6 +41,7 @@ export const EduExpEditModalComponent = ({
   return (
     <Modal
       show={show}
+      onHide={onHide}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       className="edit-edu-exp-modal"
@@ -89,6 +90,7 @@ export const EduExpEditModalComponent = ({
                 className="rounded"
                 selected={new Date(updatedEduExp.from)}
                 showYearDropdown
+                dateFormat={"yyyy-MM-dd"}
                 onChange={(date) => {
                   date &&
                     setUpdatedEduExp({
@@ -104,6 +106,7 @@ export const EduExpEditModalComponent = ({
                 id="edu-exp-to"
                 className="rounded"
                 selected={new Date(updatedEduExp.to)}
+                dateFormat={"yyyy-MM-dd"}
                 showYearDropdown
                 onChange={(date) => {
                   date &&

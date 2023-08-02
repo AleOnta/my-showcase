@@ -44,6 +44,7 @@ export const SocialModalComponent = ({
   return (
     <Modal
       show={show}
+      onHide={onHide}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered

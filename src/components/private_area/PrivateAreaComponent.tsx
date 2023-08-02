@@ -6,6 +6,7 @@ import { AboutMeItemComponent } from "./about_me/AboutMeItemComponent";
 import { InfoAndContactsItemComponent } from "./info_contacts/InfoAndContactsItemComponent";
 import { EduExpItemComponent } from "./educations_experiences/EduExpItemComponent";
 import { EduExpInterface } from "../../assets/interfaces/EduExpInterface";
+import { EduExpAddModalComponent } from "./educations_experiences/edu_exp_modals/EduExpAddModalComponent";
 
 export const PrivateAreaComponent = () => {
   const [educations, setEducations] = useSessionStorage(
@@ -21,6 +22,9 @@ export const PrivateAreaComponent = () => {
     useState<EduExpInterface[]>(experiences);
   const [staticEducations, setStaticEducations] =
     useState<EduExpInterface[]>(educations);
+
+  const [showEdu, setShowEdu] = useState<boolean>(false);
+  const [showExp, setShowExp] = useState<boolean>(false);
 
   useEffect(() => {
     setEducations(staticEducations);
@@ -91,6 +95,22 @@ export const PrivateAreaComponent = () => {
     }
   };
 
+  const addEduExp = (eduExp: EduExpInterface, nature: string) => {
+    console.log(nature);
+    switch (nature) {
+      case "edu": {
+        const updatedEdu = [...staticEducations, eduExp];
+        setStaticEducations(updatedEdu);
+        break;
+      }
+      case "exp": {
+        const updatedExp = [...staticExperiences, eduExp];
+        setStaticExperiences(updatedExp);
+        break;
+      }
+    }
+  };
+
   return (
     <Row className="m-0 mt-5 private-row">
       <Col xs={12} className="p-0">
@@ -140,10 +160,19 @@ export const PrivateAreaComponent = () => {
                   key={"edu-" + i}
                 />
               ))}
-              <Button className="w-100 confirmation-btn rounded-pill">
+              <Button
+                className="w-100 confirmation-btn rounded-pill"
+                onClick={() => setShowEdu(true)}
+              >
                 Add a new Education
               </Button>
             </Accordion.Body>
+            <EduExpAddModalComponent
+              show={showEdu}
+              onHide={() => setShowEdu(false)}
+              nature="edu"
+              addEduExp={addEduExp}
+            />
           </Accordion.Item>
           <Accordion.Item eventKey="4" className="accordion-item experiences">
             <Accordion.Header>Experiences</Accordion.Header>
@@ -159,7 +188,19 @@ export const PrivateAreaComponent = () => {
                   key={"exp-" + i}
                 />
               ))}
+              <Button
+                className="w-100 confirmation-btn rounded-pill"
+                onClick={() => setShowExp(true)}
+              >
+                Add a new Experience
+              </Button>
             </Accordion.Body>
+            <EduExpAddModalComponent
+              show={showExp}
+              onHide={() => setShowExp(false)}
+              nature="exp"
+              addEduExp={addEduExp}
+            />
           </Accordion.Item>
         </Accordion>
       </Col>

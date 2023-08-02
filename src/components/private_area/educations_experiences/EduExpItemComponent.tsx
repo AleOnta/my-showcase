@@ -8,7 +8,7 @@ import {
   PiArrowsInLineVerticalThin,
   PiArrowsOutLineVerticalThin,
 } from "react-icons/pi";
-import { useState, useRef, useLayoutEffect } from "react";
+import { useState, useRef } from "react";
 import { EduExpEditModalComponent } from "./edu_exp_modals/EduExpEditModalComponent";
 
 interface EduExpItemProps {
