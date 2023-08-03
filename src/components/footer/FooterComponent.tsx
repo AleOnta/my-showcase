@@ -16,13 +16,25 @@ export const FooterComponent = () => {
               ante mollis quam tristique convallis{" "}
             </p>
             <p>
-              <Link to="#" className="footer-icon-link">
+              <Link
+                to="https://www.linkedin.com/in/alessandro-ontani-76848a191/"
+                target="_blank"
+                className="footer-icon-link"
+              >
                 <LinkedinIcon />
               </Link>
-              <Link to="#" className="footer-icon-link">
+              <Link
+                to="https://github.com/AleOnta"
+                target="_blank"
+                className="footer-icon-link"
+              >
                 <GithubIcon />
               </Link>
-              <Link to="#" className="footer-icon-link">
+              <Link
+                to="mailto:alessandro-ontani@outlook.com"
+                target="_blank"
+                className="footer-icon-link"
+              >
                 <motion.svg
                   whileHover={{ scale: 1.15 }}
                   viewBox="0 0 192 192"
@@ -46,19 +58,19 @@ export const FooterComponent = () => {
             <ul className="m-0 p-0">
               <li>
                 -{" "}
-                <Link to="#" className="footer-link">
+                <Link to="/homepage" className="footer-link">
                   Homepage
                 </Link>
               </li>
               <li>
                 -{" "}
-                <Link to="#" className="footer-link">
+                <Link to="/my-resume" className="footer-link">
                   My Resume
                 </Link>
               </li>
               <li>
                 -{" "}
-                <Link to="#" className="footer-link">
+                <Link to="/my-resume" className="footer-link">
                   About me
                 </Link>
               </li>

@@ -23,7 +23,11 @@ export const ContactsComponent = () => {
         <span className="resume-icon-container d-flex justify-content-center align-items-center me-2 me-xl-3">
           <BiLogoGithub className="resume-icon" />
         </span>
-        <Link to={infoAndContacts.github.url} className="resume-info-p m-0">
+        <Link
+          to={infoAndContacts.github.url}
+          target="_blank"
+          className="resume-info-p m-0"
+        >
           {infoAndContacts.github.username}
         </Link>
       </div>
@@ -31,7 +35,11 @@ export const ContactsComponent = () => {
         <span className="resume-icon-container d-flex justify-content-center align-items-center me-2 me-xl-3">
           <BiLogoLinkedin className="resume-icon" />
         </span>
-        <Link to={infoAndContacts.linkedin.url} className="resume-info-p m-0">
+        <Link
+          to={infoAndContacts.linkedin.url}
+          target="_blank"
+          className="resume-info-p m-0"
+        >
           {infoAndContacts.linkedin.username}
         </Link>
       </div>

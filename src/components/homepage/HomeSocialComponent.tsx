@@ -2,6 +2,7 @@ import { Row } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { GithubIcon } from "../social_icons/GithubIcon";
 import { LinkedinIcon } from "../social_icons/LinkedinIcon";
+import { Link } from "react-router-dom";
 
 export const HomeSocialComponent = () => {
   return (
@@ -32,7 +33,12 @@ export const HomeSocialComponent = () => {
           }}
         >
           <motion.span>
-            <LinkedinIcon />
+            <Link
+              to="https://www.linkedin.com/in/alessandro-ontani-76848a191/"
+              target="_blank"
+            >
+              <LinkedinIcon />
+            </Link>
           </motion.span>
         </motion.div>
         <motion.div
@@ -46,7 +52,9 @@ export const HomeSocialComponent = () => {
           }}
         >
           <motion.span>
-            <GithubIcon />
+            <Link to="https://github.com/AleOnta" target="_blank">
+              <GithubIcon />
+            </Link>
           </motion.span>
         </motion.div>
         <motion.div
@@ -60,21 +68,23 @@ export const HomeSocialComponent = () => {
           }}
         >
           <motion.span className="p3">
-            <motion.svg
-              whileHover={{ scale: 1.15 }}
-              viewBox="0 0 192 192"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="#777777"
-              className="home-social-icon"
-            >
-              <motion.path
-                stroke="inherit"
-                stroke-linejoin="round"
-                strokeWidth="12"
-                d="M22 57.265V142c0 5.523 4.477 10 10 10h24V95.056l40 30.278 40-30.278V152h24c5.523 0 10-4.477 10-10V57.265c0-13.233-15.15-20.746-25.684-12.736L96 81.265 47.684 44.53C37.15 36.519 22 44.032 22 57.265Z"
-              />
-            </motion.svg>
+            <Link to="mailto:alessandro-ontani@outlook.com" target="_blank">
+              <motion.svg
+                whileHover={{ scale: 1.15 }}
+                viewBox="0 0 192 192"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                stroke="#777777"
+                className="home-social-icon"
+              >
+                <motion.path
+                  stroke="inherit"
+                  strokeLinejoin="round"
+                  strokeWidth="12"
+                  d="M22 57.265V142c0 5.523 4.477 10 10 10h24V95.056l40 30.278 40-30.278V152h24c5.523 0 10-4.477 10-10V57.265c0-13.233-15.15-20.746-25.684-12.736L96 81.265 47.684 44.53C37.15 36.519 22 44.032 22 57.265Z"
+                />
+              </motion.svg>
+            </Link>
           </motion.span>
         </motion.div>
       </Row>
