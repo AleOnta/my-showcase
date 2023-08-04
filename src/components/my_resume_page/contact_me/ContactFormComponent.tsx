@@ -11,7 +11,7 @@ import data from "../../../assets/content/Placeholder.json";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { ConfirmationModalComponent } from "./confirmation_modal/ConfirmationModalComponent";
+import { ConfirmationModalComponent } from "../../confirmation_modal/ConfirmationModalComponent";
 
 interface MessageInterface {
   firstname: string;
