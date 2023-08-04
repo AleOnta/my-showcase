@@ -1,31 +1,38 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import Logo from "./../../assets/images/showcase_logo.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import { Link } from "react-router-dom";
 import { formatBalance, formatChainAsNum } from "../../utils/index";
-import detectEthereumProvider from "@metamask/detect-provider";
 import { SiEthereum, SiHiveBlockchain } from "react-icons/si";
+import { WhileConnectingInterface } from "../../assets/interfaces/WhileConnectingInterface";
+import { WalletInterface } from "../../assets/interfaces/WalletInterface";
 
-interface WhileConnectingInterface {
-  isConnecting: boolean;
-  error: boolean;
-  errorMessage: string;
+interface NavbarProps {
+  loggedIn: boolean;
+  setLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
+  hasProvider: boolean | null;
+  wallet: WalletInterface;
+  setWallet: React.Dispatch<React.SetStateAction<WalletInterface>>;
+  handleWallet: (accounts: any) => Promise<void>;
+  whileConnecting: WhileConnectingInterface;
+  setWhileConnecting: React.Dispatch<
+    React.SetStateAction<WhileConnectingInterface>
+  >;
 }
 
-export const NavbarComponent = () => {
-  const initialState = { accounts: [], balance: "", chainId: "" };
+export const NavbarComponent = ({
+  loggedIn,
+  setLoggedIn,
+  hasProvider,
+  wallet,
+  setWallet,
+  handleWallet,
+  whileConnecting,
+  setWhileConnecting,
+}: NavbarProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [wallet, setWallet] = useState(initialState);
-  const [loggedIn, setLoggedIn] = useState<boolean>(false);
-  const [hasProvider, setHasProvider] = useState<boolean | null>(null);
-  const [whileConnecting, setWhileConnecting] =
-    useState<WhileConnectingInterface>({
-      isConnecting: false,
-      error: false,
-      errorMessage: "",
-    });
-
+  const initialState = { accounts: [], balance: "", chainId: "" };
   const itemVariants: Variants = {
     open: {
       opacity: 1,
@@ -33,19 +40,6 @@ export const NavbarComponent = () => {
       transition: { type: "spring", stiffness: 300, damping: 24 },
     },
     closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
-  };
-
-  const handleWallet = async (accounts: any) => {
-    const balance = formatBalance(
-      await window.ethereum!.request({
-        /* New */ method: "eth_getBalance" /* New */,
-        params: [accounts[0], "latest"] /* New */,
-      })
-    );
-    const chainId = await window.ethereum!.request({
-      method: "eth_chainId",
-    });
-    setWallet({ accounts, balance, chainId });
   };
 
   const walletConnection = async () => {
@@ -86,51 +80,6 @@ export const NavbarComponent = () => {
       errorMessage: "",
     });
   };
-
-  useEffect(() => {
-    const refreshAccounts = (accounts: any) => {
-      if (accounts.length > 0) {
-        handleWallet(accounts);
-      } else {
-        setWallet(initialState);
-      }
-    };
-
-    const refreshChain = (chainId: any) => {
-      setWallet((wallet) => ({ ...wallet, chainId: chainId }));
-    };
-
-    const getProvider = async () => {
-      const provider = await detectEthereumProvider({ silent: true });
-      setHasProvider(Boolean(provider));
-
-      if (provider) {
-        const accounts = await window.ethereum.request({
-          method: "eth_accounts",
-        });
-        refreshAccounts(accounts);
-        window.ethereum.on("accountsChanged", refreshAccounts);
-        window.ethereum.on("chainChanged", refreshChain);
-      }
-    };
-
-    getProvider();
-
-    return () => {
-      if (hasProvider) {
-        window.ethereum.removeListener("accountsChanged", refreshAccounts);
-        window.ethereum.removeListener("chainChanged", refreshChain);
-      }
-    };
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    if (wallet.accounts.length > 0) {
-      setLoggedIn(true);
-    }
-  }, [wallet]);
 
   return (
     <Container fluid className="p-0 navbar-custom">

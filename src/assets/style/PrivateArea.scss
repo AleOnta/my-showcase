@@ -23,6 +23,12 @@
         line-height: 1.1;
         letter-spacing: -0.4px;
         word-spacing: -0.6px;
+
+        @media screen and (min-width: 576px) {
+          font-size: 0.75rem;
+          letter-spacing: -0.2px;
+          word-spacing: 0px;
+        }
       }
     }
 
@@ -50,6 +56,65 @@
         }
         &::after {
           background-image: url("../images/arrow.svg");
+        }
+      }
+    }
+
+    .wallet-info-col {
+      h6 {
+        font-size: 0.8rem;
+        font-family: $font-titles;
+      }
+      p {
+        font-size: 0.75rem;
+        font-family: $font-body;
+      }
+      .address-p {
+        width: 60%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transition: color, font-weight 0.2s ease-in;
+        cursor: pointer;
+        &:hover {
+          color: black;
+          font-weight: 600;
+        }
+      }
+
+      @media screen and (min-width: 476px) {
+        h6 {
+          font-size: 0.9rem;
+        }
+        p {
+          font-size: 0.85rem;
+        }
+        .address-p {
+          width: 70%;
+        }
+      }
+
+      @media screen and (min-width: 992px) {
+        h6 {
+          font-size: 1rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+        .address-p {
+          width: 70%;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        h6 {
+          font-size: 1.1rem;
+        }
+        p {
+          font-size: 0.95rem;
+        }
+        .address-p {
+          width: 80%;
         }
       }
     }
@@ -397,6 +462,122 @@
           background-color: #fff2;
           box-shadow: 32px 0 #fff, -32px 0 #fff2;
         }
+      }
+    }
+  }
+}
+
+.confirmation-modal {
+  .modal-header.header-deletion {
+    background-color: #b22222ce;
+    .modal-title {
+      color: white;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .modal-body.body-deletion {
+    p {
+      font-family: $font-body;
+      font-size: 0.85rem;
+      letter-spacing: -0.3px;
+      word-spacing: -3px;
+    }
+  }
+
+  .modal-footer.footer-deletion {
+    .confirmation-btn {
+      width: fit-content !important;
+    }
+
+    .delete-btn {
+      font-family: $font-body;
+      font-size: 0.8rem;
+      background-color: #b22222b9;
+      border-color: #b22222b9;
+
+      &:hover {
+        background-color: #b22222fd;
+        border-color: #b22222fd;
+      }
+    }
+  }
+}
+
+.private-rejected-col {
+  h2 {
+    width: fit-content;
+    font-family: $font-titles;
+    font-size: 1.8rem;
+    color: white;
+    text-transform: uppercase;
+    background-color: $jet;
+  }
+
+  div {
+    background-color: rgba(241, 241, 241, 0.55);
+
+    h5 {
+      font-weight: 600;
+      font-size: 1.1rem;
+      font-family: $font-body;
+      color: $jet;
+    }
+
+    p {
+      font-size: 0.95rem;
+      font-family: $font-body;
+    }
+
+    .or {
+      text-align: center;
+      font-size: 1.4rem;
+      font-family: $font-titles;
+    }
+    .redirect-btn {
+      width: 45% !important;
+      background-color: rgba(121, 121, 121, 0.822);
+      border-color: gray;
+      font-family: $font-body;
+      font-weight: 500;
+      font-size: 1rem;
+      color: white;
+      width: 100%;
+      cursor: pointer;
+
+      &:hover,
+      &:active,
+      &:focus,
+      &:focus-visible {
+        background-color: rgba(66, 66, 66, 0.74);
+        color: #fff;
+        border-color: gray;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    div {
+      h5 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1.15rem;
+      }
+
+      .or {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .redirect-btn {
+        font-size: 1.1rem;
       }
     }
   }

@@ -10,6 +10,7 @@ import {
 } from "react-icons/pi";
 import { useState, useRef } from "react";
 import { EduExpEditModalComponent } from "./edu_exp_modals/EduExpEditModalComponent";
+import { ConfirmationModalComponent } from "../../confirmation_modal/ConfirmationModalComponent";
 
 interface EduExpItemProps {
   index: number;
@@ -29,6 +30,7 @@ export const EduExpItemComponent = ({
   nature,
 }: EduExpItemProps) => {
   const [showEdit, setShowEdit] = useState<boolean>(false);
+  const [showConfirmation, setShowConfirmation] = useState<boolean>(false);
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
   const months: string[] = [
     "Jan",
@@ -98,7 +100,7 @@ export const EduExpItemComponent = ({
                   className="dropdown-item d-flex align-items-center justify-content-start"
                   data-bs-toggle="dropdown"
                   onClick={() => {
-                    edit_delete(index, `del_${nature}`);
+                    setShowConfirmation(true);
                   }}
                 >
                   <PiTrash className="me-2 fs-4" />
@@ -143,6 +145,12 @@ export const EduExpItemComponent = ({
         index={index}
         eduOrExp={eduOrExp}
         edit_delete={edit_delete}
+      />
+      <ConfirmationModalComponent
+        show={showConfirmation}
+        onHide={() => setShowConfirmation(false)}
+        nature="deletion"
+        deletion={() => edit_delete(index, `del_${nature}`)}
       />
     </>
   );
