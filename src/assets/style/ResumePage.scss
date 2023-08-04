@@ -115,7 +115,9 @@
   .resume-section-title {
     font-size: 1.3rem;
     font-weight: 600;
+    color: $jet;
     font-family: $font-titles;
+    background-color: #a3a8b9;
 
     @media screen and (min-width: 576px) {
       margin-bottom: 20px;
@@ -125,7 +127,6 @@
     }
     @media screen and (min-width: 1400px) {
       font-size: 1.6rem;
-      margin-bottom: 30px;
     }
   }
 
@@ -237,7 +238,22 @@
   .resume-title-line {
     height: 1px;
     width: 100%;
-    background-color: black;
+    background-color: #7a829b;
+  }
+
+  .resume-edu-container {
+    @media screen and (min-width: 768px) {
+      margin-bottom: 36px !important;
+    }
+    @media screen and (min-width: 992px) {
+      margin-bottom: 72px !important;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 28px !important;
+    }
+    @media screen and (min-width: 1400px) {
+      margin-bottom: 9px !important;
+    }
   }
 
   .resume-edu-container,

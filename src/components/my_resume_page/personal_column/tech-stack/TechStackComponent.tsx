@@ -1,5 +1,4 @@
 import { Row } from "react-bootstrap";
-import { motion, Variants } from "framer-motion";
 import {
   SiCss3,
   SiHibernate,
@@ -15,17 +14,6 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { SingleStackComponent } from "./SingleStackComponent";
 
 export const TechStackComponent = () => {
-  const tooltipVariants: Variants = {
-    initial: {
-      opacity: 0,
-      scale: 0,
-    },
-    animate: {
-      opacity: 1,
-      scale: 1,
-    },
-  };
-
   return (
     <>
       <Row className="m-0 icon-stack-row">

@@ -12,7 +12,7 @@ export const PersonalInfoComponent = () => {
 
   return (
     <motion.div className="col col-12 col-sm-6 col-md-12 resume-personal-info mb-4">
-      <h3 className="resume-section-title">PERSONAL INFO</h3>
+      <h3 className="resume-section-title py-2 px-3">PERSONAL INFO</h3>
       <div className="d-flex aling-items-center mb-2 mb-sm-3">
         <span className="resume-icon-container d-flex justify-content-center align-items-center me-2 me-xl-3">
           <BiUser className="resume-icon" />
