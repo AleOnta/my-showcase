@@ -1,5 +1,4 @@
 import { Button, Modal } from "react-bootstrap";
-import { EduExpInterface } from "../../assets/interfaces/EduExpInterface";
 
 interface ConfirmationModalProps {
   show: boolean;

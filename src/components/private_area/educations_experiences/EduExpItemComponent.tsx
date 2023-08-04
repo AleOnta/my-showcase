@@ -64,7 +64,7 @@ export const EduExpItemComponent = ({
   return (
     <>
       <motion.div
-        className={`px-0 my-3 card position-relative ${
+        className={`px-0 my-3 card position-relative mb-lg-4 ${
           isExpanded && "expanded"
         }`}
         initial={{ scale: 0, opacity: 0 }}
@@ -76,7 +76,7 @@ export const EduExpItemComponent = ({
         }}
         exit={{ scale: 0, opacity: 0 }}
       >
-        <Card.Header>
+        <Card.Header className="px-md-4 py-md-3">
           <div className="d-flex align-items-center justify-content-between mb-2">
             <h4 className="private-eduExp-title mb-0">{eduOrExp.title}</h4>
             <Dropdown id="eduExpDropdown">
@@ -112,13 +112,13 @@ export const EduExpItemComponent = ({
           <div className="d-flex align-items-center justify-content-between">
             <h5 className="private-eduExp-subtitle mb-0">{eduOrExp.name}</h5>
             <span className="private-eduExp-dates">
-              {defineDate(eduOrExp.from)} - {defineDate(eduOrExp.to)}
+              {defineDate(eduOrExp.from)} <br /> {defineDate(eduOrExp.to)}
             </span>
           </div>
         </Card.Header>
-        <Card.Body ref={divRef}>
-          <p className="private-description-head mb-0">Description:</p>
-          <p className="private-eduExp-description mb-1">
+        <Card.Body ref={divRef} className="px-md-4 py-md-3">
+          <p className="private-description-head mb-0 mb-sm-3">Description:</p>
+          <p className="private-eduExp-description mb-1 ">
             {eduOrExp.description}
           </p>
         </Card.Body>

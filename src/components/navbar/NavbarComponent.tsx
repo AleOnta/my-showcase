@@ -3,7 +3,7 @@ import Logo from "./../../assets/images/showcase_logo.svg";
 import { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import { Link } from "react-router-dom";
-import { formatBalance, formatChainAsNum } from "../../utils/index";
+import { formatChainAsNum } from "../../utils/index";
 import { SiEthereum, SiHiveBlockchain } from "react-icons/si";
 import { WhileConnectingInterface } from "../../assets/interfaces/WhileConnectingInterface";
 import { WalletInterface } from "../../assets/interfaces/WalletInterface";

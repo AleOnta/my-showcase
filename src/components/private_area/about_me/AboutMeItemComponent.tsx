@@ -12,7 +12,7 @@ export const AboutMeItemComponent = () => {
   return (
     <Form className="row m-0 d-flex flex-column flex-md-row">
       <Col>
-        <Row className="m-0 d-flex flex-column flex-sm-row aling-items-center justify-content-sm-around">
+        <Row className="m-0 h-100 d-flex align-items-center justify-content-sm-between">
           <motion.div
             className="col col-12 d-flex flex-row align-items-center justify-content-center p-0"
             initial={{ scale: 0, opacity: 0 }}
@@ -25,7 +25,10 @@ export const AboutMeItemComponent = () => {
           >
             <div className="img-preview"></div>
           </motion.div>
-          <Col className="d-flex align-items-end p-0 px-sm-2">
+          <Col
+            xs={12}
+            className="d-flex justify-content-center align-items-end p-0 px-sm-2"
+          >
             <Form.Group controlId="formFile" className="mb-3 mb-sm-0">
               <Form.Label className="file-picker-label">
                 Pick a local file
@@ -64,7 +67,7 @@ export const AboutMeItemComponent = () => {
         <Form.Label htmlFor="control-bio">Biography</Form.Label>
         <FormControl
           as="textarea"
-          rows={4}
+          rows={10}
           defaultValue={aboutMe.bio}
           className="control-area"
           onChange={(e) =>

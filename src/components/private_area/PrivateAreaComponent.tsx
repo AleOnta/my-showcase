@@ -159,9 +159,9 @@ export const PrivateAreaComponent = ({
                     </Accordion.Body>
                   </Accordion.Item>
                   <div className="accordion-separator">
-                    <div className="d-flex align-items-center justify-content-center mb-1">
+                    <div className="d-flex align-items-center justify-content-center mb-1 mt-xl-5 mb-xl-4">
                       <span className="separator-line me-2" />
-                      DATA MANAGEMENT
+                      <span className="separator-title">DATA MANAGEMENT</span>
                       <span className="separator-line ms-2" />
                     </div>
                     <p className="separator-explain text-center">

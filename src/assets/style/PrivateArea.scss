@@ -15,6 +15,15 @@
         background-color: rgba(128, 128, 128, 0.815);
       }
 
+      .separator-title {
+        @media screen and (min-width: 576px) {
+          font-size: 1.1rem;
+        }
+        @media screen and (min-width: 992px) {
+          font-size: 1.2rem;
+        }
+      }
+
       .separator-explain {
         font-size: 0.65rem;
         font-family: $font-body;
@@ -28,6 +37,12 @@
           font-size: 0.75rem;
           letter-spacing: -0.2px;
           word-spacing: 0px;
+        }
+        @media screen and (min-width: 992px) {
+          font-size: 0.8rem;
+        }
+        @media screen and (min-width: 1400px) {
+          font-size: 0.85rem;
         }
       }
     }
@@ -59,6 +74,8 @@
         }
       }
     }
+
+    // WALLET INFO SECTION
 
     .wallet-info-col {
       h6 {
@@ -119,6 +136,8 @@
       }
     }
 
+    // GENERAL FORM / INPUT RULES
+
     .form-control,
     #control-birthdate-info {
       width: 100%;
@@ -128,6 +147,13 @@
       font-size: 0.7rem;
       background-color: rgba(211, 211, 211, 0.397);
       border-color: rgba(128, 128, 128, 0.445);
+
+      @media screen and (min-width: 992px) {
+        font-size: 0.75rem;
+      }
+      @media screen and (min-width: 992px) {
+        font-size: 0.8rem;
+      }
 
       &:focus {
         -webkit-box-shadow: inset 0px -1px 8px -3px rgba(133, 133, 140, 1);
@@ -191,10 +217,49 @@
       }
     }
 
-    // EDU EXP ITEM COMPONENT SECTION:
+    // ABOUT ME SECTION
+
+    .accordion-item.about-me {
+      .img-preview {
+        width: 150px;
+        height: 150px;
+        border-radius: 9999px;
+        background-image: url("../images/avatar.jpg");
+        background-size: cover;
+        background-position: right;
+
+        @media screen and (min-width: 576px) {
+          width: 200px;
+          height: 200px;
+        }
+        @media screen and (min-width: 768px) {
+          width: 275px;
+          height: 275px;
+        }
+      }
+    }
+
+    // EDU EXP ITEM COMPONENT SECTION
 
     .card.expanded {
-      max-height: 350px;
+      max-height: 450px;
+
+      .card-body {
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          width: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: rgba(51, 51, 51, 0.582);
+          border-radius: 4px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: inherit;
+        }
+      }
     }
 
     .card {
@@ -208,16 +273,31 @@
       -o-transition: max-height 1s;
       transition: max-height 1s;
 
+      @media screen and (min-width: 768px) {
+        max-height: none;
+      }
+
       .card-header {
         background-color: rgba(138, 138, 138, 0.514);
         h4.private-eduExp-title {
+          width: 80%;
           font-size: 1rem;
           text-transform: uppercase;
           font-family: $font-titles;
           display: -webkit-box;
-          -webkit-line-clamp: 1;
+          -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
           overflow: hidden;
+
+          @media screen and (min-width: 460px) {
+            font-size: 1.1rem;
+          }
+          @media screen and (min-width: 576px) {
+            font-size: 1.25rem;
+          }
+          @media screen and (min-width: 992px) {
+            font-size: 1.35rem;
+          }
         }
 
         .private-eduExp-btn {
@@ -244,6 +324,7 @@
         }
 
         h5.private-eduExp-subtitle {
+          width: 80%;
           font-size: 0.9rem;
           color: rgb(87, 87, 87);
           font-family: $font-titles;
@@ -251,37 +332,46 @@
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
           overflow: hidden;
+
+          @media screen and (min-width: 460px) {
+            font-size: 1rem;
+          }
+          @media screen and (min-width: 576px) {
+            font-size: 1.08rem;
+          }
+          @media screen and (min-width: 992px) {
+            font-size: 1.2rem;
+          }
         }
 
         .private-eduExp-dates {
           font-size: 0.55rem;
           text-transform: uppercase;
           font-weight: 500;
+
+          @media screen and (min-width: 460px) {
+            font-size: 0.6rem;
+          }
+          @media screen and (min-width: 576px) {
+            font-size: 0.65rem;
+          }
+          @media screen and (min-width: 992px) {
+            font-size: 0.75rem;
+          }
         }
       }
 
       .card-body {
         background-color: rgba(211, 211, 211, 0.397);
-        overflow-y: scroll;
-
-        &::-webkit-scrollbar {
-          width: 3px;
-        }
-
-        &::-webkit-scrollbar-thumb {
-          background-color: rgba(51, 51, 51, 0.582);
-          border-radius: 4px;
-        }
-
-        &::-webkit-scrollbar-track {
-          background-color: inherit;
-        }
 
         p.private-description-head {
           font-size: 0.65rem;
           font-family: $font-titles;
           text-transform: uppercase;
           color: gray;
+          @media screen and (min-width: 460px) {
+            font-size: 0.7rem;
+          }
         }
 
         p.private-eduExp-description {
@@ -289,6 +379,16 @@
           font-family: $font-body;
           letter-spacing: -0.2px;
           word-spacing: -2px;
+
+          @media screen and (min-width: 460px) {
+            font-size: 0.75rem;
+          }
+          @media screen and (min-width: 576px) {
+            font-size: 0.85rem;
+          }
+          @media screen and (min-width: 992px) {
+            font-size: 0.95rem;
+          }
         }
       }
 
@@ -363,17 +463,6 @@
             color: #fff;
           }
         }
-      }
-    }
-
-    .accordion-item.about-me {
-      .img-preview {
-        width: 150px;
-        height: 150px;
-        border-radius: 9999px;
-        background-image: url("../images/avatar.jpg");
-        background-size: cover;
-        background-position: right;
       }
     }
   }
