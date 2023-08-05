@@ -101,7 +101,7 @@ export const ContactFormComponent = () => {
 
   return (
     <>
-      <Col xs={12} className="contact-form-container mt-4 p-0">
+      <Col xs={12} className="contact-form-container p-0">
         <Row className="m-0 d-md-flex justify-content-center ">
           <Col
             xs={12}

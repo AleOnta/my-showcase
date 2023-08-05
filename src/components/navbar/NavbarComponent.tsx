@@ -162,8 +162,11 @@ export const NavbarComponent = ({
                       style={{ pointerEvents: isOpen ? "auto" : "none" }}
                     >
                       <motion.li
-                        className="rounded mt-2 p-2 text-uppercase d-flex align-items-center"
+                        className="rounded mt-2 p-2 text-uppercase d-flex align-items-center nav-address-item"
                         variants={itemVariants}
+                        onClick={() => {
+                          navigator.clipboard.writeText(wallet.accounts[0]);
+                        }}
                       >
                         <h6 className="p-0 m-0 li-title me-2">Address:</h6>
                         <span className="wallet-value address">
@@ -196,14 +199,12 @@ export const NavbarComponent = ({
                       </motion.li>
 
                       <motion.li
-                        className="rounded mt-2 p-2 text-uppercase d-flex align-items-center"
+                        className="rounded mt-2 p-2 text-uppercase d-flex align-items-center link-to-private"
                         variants={itemVariants}
                       >
-                        <h6 className="p-0 m-0 li-title">
-                          <Link className="nav-link" to="/private-area">
-                            Private Area
-                          </Link>
-                        </h6>
+                        <Link className="nav-link" to="/private-area">
+                          <h6 className="p-0 m-0 li-title">Private Area</h6>
+                        </Link>
                       </motion.li>
 
                       <motion.li
