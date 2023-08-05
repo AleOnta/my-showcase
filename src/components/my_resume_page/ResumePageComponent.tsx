@@ -35,7 +35,7 @@ export const ResumePageComponent = () => {
             duration: 0.5,
           }}
         >
-          <Row className="d-flex justify-content-center">
+          <Row className="d-flex justify-content-center resume-personal-column rounded pt-4">
             <motion.div className="resume-mobile-recap d-md-none p-0 mb-4 mb-sm-5">
               <div className="d-flex align-items-center justify-content-around">
                 <div className="resume-mobile-img"></div>
@@ -52,7 +52,7 @@ export const ResumePageComponent = () => {
             <PersonalInfoComponent />
             <ContactsComponent />
             <motion.div className="col col-12 resume-stack-info">
-              <h3 className="resume-section-title py-2 px-3">TECH STACK</h3>
+              <h3 className="resume-section-title py-2 px-3 ">TECH STACK</h3>
               <TechStackComponent />
             </motion.div>
           </Row>
@@ -66,8 +66,8 @@ export const ResumePageComponent = () => {
             duration: 0.5,
           }}
         >
-          <Row className="m-0">
-            <motion.div className="col col-12 d-none d-md-block resume-about-me p-0">
+          <Row className="m-0 pt-4">
+            <motion.div className="col col-12 d-none d-md-block resume-about-me p-0 ">
               <h2 className="resume-about-me-title mb-0">{aboutMe.fullname}</h2>
               <h4 className="resume-about-me-job">{aboutMe.job}</h4>
               <p className="resume-about-me-text mb-0">{aboutMe.bio}</p>

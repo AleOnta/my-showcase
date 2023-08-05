@@ -28,7 +28,7 @@ export const TechStackComponent = () => {
         <SingleStackComponent icon={<SiReact />} name="React JS" />
         <SingleStackComponent icon={<SiTailwindcss />} name="TailwindCSS" />
       </Row>
-      <Row className="m-0 mb-4 icon-stack-row">
+      <Row className="m-0 icon-stack-row">
         <SingleStackComponent icon={<FaJava />} name="Java" />
         <SingleStackComponent icon={<SiSpring />} name="Spring" />
         <SingleStackComponent icon={<SiHibernate />} name="Hibernate" />

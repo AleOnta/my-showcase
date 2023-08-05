@@ -1,6 +1,10 @@
 .resume-container {
   margin-top: 130px !important;
 
+  .resume-personal-column {
+    background-color: #dcdee379;
+  }
+
   .resume-mobile-recap {
     .resume-mobile-img {
       min-width: 75px;
@@ -153,12 +157,12 @@
     height: 28px;
     border-radius: 9999px;
     background-color: $jet;
-    z-index: -1;
+    z-index: 5;
 
     .resume-icon {
       font-size: 1rem;
       color: white;
-      z-index: 1;
+      z-index: 6;
       &:hover {
         cursor: pointer !important;
       }
@@ -260,6 +264,15 @@
   .resume-exp-container {
     .edu-exp-main-title {
       font-size: 1.1rem;
+    }
+
+    .edu-exp-from-date,
+    .edu-exp-to-date {
+      background-color: #9ea4b8 !important;
+      font-size: 0.6rem;
+      font-weight: 400;
+      font-family: $font-body;
+      text-transform: uppercase;
     }
 
     .edu-exp-second-title {

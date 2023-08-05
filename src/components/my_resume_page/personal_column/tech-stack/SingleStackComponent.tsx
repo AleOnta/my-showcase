@@ -20,7 +20,7 @@ export const SingleStackComponent = ({ icon, name }: StackComponentProps) => {
 
   return (
     <motion.div
-      className="col col-3 icon-stack-col p-0 d-flex align-items-center justify-content-center justify-content-md-start mb-3 mb-sm-4 mb-xxl-5 position-relative"
+      className="col col-3 icon-stack-col p-0 d-flex align-items-center justify-content-center justify-content-md-center mb-3 mb-sm-4 mb-xxl-5 position-relative"
       initial="initial"
       animate="initial"
       whileHover="animate"
