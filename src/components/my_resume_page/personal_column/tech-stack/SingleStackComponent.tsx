@@ -1,8 +1,5 @@
 import { Variants, motion } from "framer-motion";
-import { IconType } from "react-icons/lib";
-import { SiHtml5 } from "react-icons/si";
-import React, { createElement } from "react";
-import { IconBase, IconBaseProps, IconContext } from "react-icons/lib";
+import { IconBase } from "react-icons/lib";
 
 interface StackComponentProps {
   icon: any;

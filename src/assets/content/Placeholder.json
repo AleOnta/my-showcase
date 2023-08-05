@@ -22,7 +22,7 @@
   },
   "educations": [
     {
-      "title": "000 EPICODE SCHOOL",
+      "title": "EPICODE SCHOOL",
       "name": "Junior Full-Stack Web Developer",
       "description": "The epicode bootcamp to become Junior Full-Stack Developers lasts for 6 months. The first 3 months are entirely dedicated to the study of front-end development, starting from the bases such as HTML & CSS, and then moving on to the programming in Javascript and Typescript, deepening frameworks such as Bootstrap and React JS. The next two months, they are dedicated to back-end development, and to the creation of Rest API in Java Spring. All are made on relational databases in PostgreSQL and manipulated via ORM such as hibernate. The final month is entirely dedicated to the construction of a full-stack project.",
       "from": "2022-11-28",
@@ -38,11 +38,11 @@
   ],
   "experiences": [
     {
-      "title": "EPICODE SCHOOL",
-      "name": "Junior Full-Stack Web Developer",
-      "description": "The epicode bootcamp to become Junior Full-Stack Developers lasts for 6 months. The first 3 months are entirely dedicated to the study of front-end development, starting from the bases such as HTML & CSS, and then moving on to the programming in Javascript and Typescript, deepening frameworks such as Bootstrap and React JS. The next two months, they are dedicated to back-end development, and to the creation of Rest API in Java Spring. All are made on relational databases in PostgreSQL and manipulated via ORM such as hibernate. The final month is entirely dedicated to the construction of a full-stack project.",
-      "from": "2022-11-28",
-      "to": "2023-06-17"
+      "title": "HOTEL SILVER",
+      "name": "Front Office Agent",
+      "description": "`This is one of my latest experiences in the Tourism sector, before putting everything aside to dedicate myself entirely to my passion for web development. In this experience, some of my tasks were: Reception of customers arriving in the structure.\nCheck-in & check-out of customers.\nStoring customer reservations in the structure PMS software.\nRegistration, issue and archiving of the invoices of the structure.`",
+      "from": "2022-09-08",
+      "to": "2022-11-26"
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { Col, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import { motion } from "framer-motion";
 
 export const HomeBodyComponent = () => {
@@ -15,18 +15,24 @@ export const HomeBodyComponent = () => {
         }}
       >
         <motion.p className="home-body-paragraph">
-          In this side project, i am moving my first steps in the Web3 web
-          development, with the implementation of a login procedure through a
-          digital wallet (Metamask).
+          In this side project, i am moving my first steps in the{" "}
+          <code>Web3 development</code>, with the implementation of a login
+          procedure through a digital wallet (Metamask).
         </motion.p>
         <motion.p className="home-body-paragraph">
-          To try this feature, click the <code>login</code> button in the right
-          corner of the navbar.
+          To test this feature be sure to have installed the{" "}
+          <code>Metamask's extension</code> on your browser. Once this is done,
+          you can proceed by clicking on the <code>Connect</code> button, placed
+          in the top-right side of the navbar.
         </motion.p>
         <motion.p className="home-body-paragraph">
-          <code>Please note</code> that by fulfilling the login process will
-          automatically allow you to modify the CV structure & content.
+          <code>Please note</code> that fulfilling the login process, will
+          automatically give you access to the <code>private-area</code> of this
+          web application.
           <br />
+          In this area you will be able to manipulate data of my CV - but for
+          safety reason, yor changes will be stored into the{" "}
+          <code>SessionStorage</code> of your browser.
         </motion.p>
         <motion.p className="home-body-paragraph">
           An another feature of this project, it's to allow visitors to view my
