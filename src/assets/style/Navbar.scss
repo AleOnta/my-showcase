@@ -105,8 +105,12 @@
       font-weight: 500;
       font-family: $font-body;
       background-color: rgba(185, 185, 185, 0.85);
-      transition: opacity 0.6s ease-in;
       cursor: auto;
+      -webkit-transition: opacity 0.6s ease-in;
+      -moz-transition: opacity 0.6s ease-in;
+      -ms-transition: opacity 0.6s ease-in;
+      -o-transition: opacity 0.6s ease-in;
+      transition: opacity 0.6s ease-in;
     }
 
     &:hover {
@@ -206,6 +210,10 @@
     }
 
     .link-to-private {
+      -webkit-transition: background-color 0.2s ease-in-out;
+      -moz-transition: background-color 0.2s ease-in-out;
+      -ms-transition: background-color 0.2s ease-in-out;
+      -o-transition: background-color 0.2s ease-in-out;
       transition: background-color 0.2s ease-in-out;
 
       &:hover {
@@ -223,8 +231,13 @@
 
     .nav-address-item {
       span {
+        -webkit-transition: font-weight 0.3s ease;
+        -moz-transition: font-weight 0.3s ease;
+        -ms-transition: font-weight 0.3s ease;
+        -o-transition: font-weight 0.3s ease;
         transition: font-weight 0.3s ease;
         cursor: pointer;
+
         &:hover {
           font-weight: 600;
         }

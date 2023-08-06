@@ -25,7 +25,12 @@
 
     li .footer-link {
       color: white;
-      transition: color 0.2s;
+      -webkit-transition: color 0.2s ease-out;
+      -moz-transition: color 0.2s ease-out;
+      -ms-transition: color 0.2s ease-out;
+      -o-transition: color 0.2s ease-out;
+      transition: color 0.2s ease-out;
+
       &:hover {
         text-decoration: none;
         color: $khaki;
@@ -40,7 +45,11 @@
 
     a {
       color: white;
-      transition: color 0.2s;
+      -webkit-transition: color 0.2s ease-out;
+      -moz-transition: color 0.2s ease-out;
+      -ms-transition: color 0.2s ease-out;
+      -o-transition: color 0.2s ease-out;
+      transition: color 0.2s ease-out;
 
       &:hover {
         color: $khaki;

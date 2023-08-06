@@ -97,8 +97,14 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        transition: color, font-weight 0.2s ease-in;
+        transition-property: color, font-weight;
+        -webkit-transition: 0.2s ease-in;
+        -moz-transition: 0.2s ease-in;
+        -ms-transition: 0.2s ease-in;
+        -o-transition: 0.2s ease-in;
+        transition: 0.2s ease-in;
         cursor: pointer;
+
         &:hover {
           color: black;
           font-weight: 600;
@@ -312,6 +318,10 @@
 
           .icon {
             color: $jet;
+            -webkit-transition: color 0.2s ease;
+            -moz-transition: color 0.2s ease;
+            -ms-transition: color 0.2s ease;
+            -o-transition: color 0.2s ease;
             transition: color 0.2s ease;
           }
 
@@ -401,6 +411,7 @@
       .private-eduExp-expand.off {
         position: sticky;
         bottom: 0;
+        cursor: pointer;
         background-color: rgba(185, 185, 185, 1);
         border-bottom-left-radius: 0.375rem;
         border-bottom-right-radius: 0.375rem;
@@ -409,7 +420,6 @@
         -moz-transition: 0.3s ease-out;
         -o-transition: 0.3s ease-out;
         transition: 0.3s ease-out;
-        cursor: pointer;
         -webkit-box-shadow: 0px -18px 20px 20px rgba(185, 185, 185, 1);
         -moz-box-shadow: 0px -18px 20px 20px rgba(185, 185, 185, 1);
         box-shadow: 0px -18px 20px 20px rgba(185, 185, 185, 1);

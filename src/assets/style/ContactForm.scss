@@ -47,6 +47,10 @@
       font-family: $font-body;
       letter-spacing: -0.3px;
       word-spacing: -2px;
+      -webkit-transition: border-color 0.2s ease-out;
+      -moz-transition: border-color 0.2s ease-out;
+      -ms-transition: border-color 0.2s ease-out;
+      -o-transition: border-color 0.2s ease-out;
       transition: border-color 0.2s ease-out;
 
       &:hover,
@@ -66,7 +70,11 @@
       font-weight: 400;
       font-size: 0.95rem;
       transition-property: border-color, background-color;
-      transition: 0.2s ease-in;
+      -webkit-transition: 0.2s ease-out;
+      -moz-transition: 0.2s ease-out;
+      -ms-transition: 0.2s ease-out;
+      -o-transition: 0.2s ease-out;
+      transition: 0.2s ease-out;
 
       &:hover,
       &:active,
@@ -147,10 +155,15 @@
       color: $jet;
       text-decoration: none;
       font-size: 0.8rem;
-      transition: color, transform 0.2s ease;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+      transition-property: color, transform;
+      -webkit-transition: 0.2s ease;
+      -moz-transition: 0.2s ease;
+      -ms-transition: 0.2s ease;
+      -o-transition: 0.2s ease;
+      transition: 0.2s ease;
 
       @media screen and (min-width: 576px) {
         font-size: 0.9rem;
