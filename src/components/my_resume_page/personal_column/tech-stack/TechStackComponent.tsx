@@ -16,7 +16,7 @@ import { SingleStackComponent } from "./SingleStackComponent";
 export const TechStackComponent = () => {
   return (
     <>
-      <Row className="m-0 icon-stack-row">
+      <Row className="m-0 icon-stack-row pt-3">
         <SingleStackComponent icon={<SiHtml5 />} name="HTML5" />
         <SingleStackComponent icon={<SiCss3 />} name="CSS3" />
         <SingleStackComponent icon={<SiJavascript />} name="JavaScript" />
@@ -28,7 +28,7 @@ export const TechStackComponent = () => {
         <SingleStackComponent icon={<SiReact />} name="React JS" />
         <SingleStackComponent icon={<SiTailwindcss />} name="TailwindCSS" />
       </Row>
-      <Row className="m-0 icon-stack-row">
+      <Row className="m-0 icon-stack-row pb-2">
         <SingleStackComponent icon={<FaJava />} name="Java" />
         <SingleStackComponent icon={<SiSpring />} name="Spring" />
         <SingleStackComponent icon={<SiHibernate />} name="Hibernate" />

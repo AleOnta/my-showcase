@@ -1,4 +1,4 @@
-import { Button, Card, Dropdown } from "react-bootstrap";
+import { Badge, Button, Card, Dropdown } from "react-bootstrap";
 import { AiOutlineMenu } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { EduExpInterface } from "../../../assets/interfaces/EduExpInterface";
@@ -112,7 +112,9 @@ export const EduExpItemComponent = ({
           <div className="d-flex align-items-center justify-content-between">
             <h5 className="private-eduExp-subtitle mb-0">{eduOrExp.name}</h5>
             <span className="private-eduExp-dates">
-              {defineDate(eduOrExp.from)} <br /> {defineDate(eduOrExp.to)}
+              <Badge>{defineDate(eduOrExp.from)}</Badge>{" "}
+              <br className="d-md-none" />{" "}
+              <Badge>{defineDate(eduOrExp.to)}</Badge>
             </span>
           </div>
         </Card.Header>

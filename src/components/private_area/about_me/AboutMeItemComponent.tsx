@@ -27,7 +27,7 @@ export const AboutMeItemComponent = () => {
           </motion.div>
           <Col
             xs={12}
-            className="d-flex justify-content-center align-items-end p-0 px-sm-2"
+            className="d-flex justify-content-center align-items-end p-0 px-sm-2 align-self-end"
           >
             <Form.Group controlId="formFile" className="mb-3 mb-sm-0">
               <Form.Label className="file-picker-label">

@@ -1,4 +1,5 @@
-import { Badge, Col } from "react-bootstrap";
+import { motion } from "framer-motion";
+import { Badge } from "react-bootstrap";
 import { EduExpInterface } from "../../../assets/interfaces/EduExpInterface";
 
 interface eduExpProps {
@@ -6,6 +7,14 @@ interface eduExpProps {
 }
 
 export const EduExpComponent = ({ eduExp }: eduExpProps) => {
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
   const months: string[] = [
     "Jan",
     "Feb",
@@ -29,7 +38,7 @@ export const EduExpComponent = ({ eduExp }: eduExpProps) => {
   };
 
   return (
-    <Col xs={12} className="p-0 mb-4">
+    <motion.div className="col col-12 p-0 mb-4" variants={item}>
       <div className="d-flex justify-content-between align-items-center">
         <h4 className="edu-exp-main-title mb-0 text-uppercase">
           {eduExp.title}
@@ -45,6 +54,6 @@ export const EduExpComponent = ({ eduExp }: eduExpProps) => {
         </Badge>
       </div>
       <p className="edu-exp-text">{eduExp.description}</p>
-    </Col>
+    </motion.div>
   );
 };
